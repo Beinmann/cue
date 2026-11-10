@@ -11,7 +11,7 @@ set -euo pipefail
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 src="$here/vocabulary.md"
-begin='<!-- vocabulary:begin (managed by install.sh, edit vocabulary.md instead) -->'
+begin='<!-- vocabulary:begin (managed by install.sh of the cue tool, edit vocabulary.md instead) -->'
 end='<!-- vocabulary:end -->'
 
 case "${1:-}" in
@@ -28,8 +28,9 @@ touch "$target"
 
 tmp="$(mktemp)"
 # Drop any existing managed block, then append the fresh one.
-awk -v b="$begin" -v e="$end" '
-  $0 == b {skip=1; next}
+# Match on the marker prefix so blocks written with an older wording are replaced too.
+awk -v b="${begin%% (*}" -v e="$end" '
+  index($0, b) == 1 {skip=1; next}
   $0 == e {skip=0; next}
   !skip {print}
 ' "$target" > "$tmp"
