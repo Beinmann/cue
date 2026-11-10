@@ -1,5 +1,7 @@
 # Personal vocabulary
 
+Experiment: using keywords to interact with ai's. Unsure whether I keep this (2026-11-10). Public repo so I can clone this from machines without my github login
+
 Keywords I use in any project. When a message contains one, follow its
 definition. All end in `-me`.
 
