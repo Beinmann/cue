@@ -12,6 +12,8 @@ definition. All end in `-me`.
   ask before starting. If tests fail or the merge conflicts, stop and report.
 - **park-me**: capture the idea as a ticket or note (not code) and return to
   what we were doing.
+- **ticket-me**: create a ticket for this (what we're discussing or pointing
+  at). Ticket only, no code.
 
 ## Output style
 
