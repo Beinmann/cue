@@ -32,3 +32,12 @@ definition. All end in `-me`.
   starting.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
+- **progress-me**: "where was I" view for coming back to a session: the
+  goal, what we did this session (or a wider range if I specify one), next
+  steps as a visual todo list (done / in progress / next), last commands,
+  running and blocked agents, files changed, and what is waiting for me
+  (merging progress window, run history, session report). Show it in
+  `hatch` if a `hatch` command exists; otherwise report it in a visually nice
+  form (file or chat) that is easy to parse at a glance. Idea only, no
+  ticket: a dedicated window or always-visible status line is not designed
+  yet.
