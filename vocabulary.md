@@ -8,10 +8,12 @@ definition. All end in `-me`.
 ## Acting
 
 - **land-me**: implement what I'm pointing at (ticket, file, selection, or
-  the last discussed change) in a fresh git worktree on its own branch.
-  Run the tests, then merge into `main` (no force). Remove the worktree and
-  branch afterwards. Do not push unless I say so. If the target is ambiguous,
-  ask before starting. If tests fail or the merge conflicts, stop and report.
+  the last discussed change) in the background, in a fresh git worktree on
+  its own branch, so we can keep talking meanwhile. Run the tests, then merge
+  into `main` (no force). Remove the worktree and branch afterwards. Do not
+  push unless I say so. If the target is ambiguous, ask before starting (in
+  the foreground, before launching). If tests fail or the merge conflicts,
+  stop and report back to me.
 - **wave-me**: I point at a collection of things to do (list, tickets,
   notes, selection) and want it done in two waves. Wave 1: everything clear
   enough to implement is implemented in the background by one agent, in one
@@ -41,6 +43,12 @@ definition. All end in `-me`.
   decision.
 - **quiz-me**: ask every question you need answered in one batch before
   starting.
+- **chisel-me**: take the idea I'm describing from vague to
+  implementation-ready within 1-2 turns, and stop there. Ask every question
+  needed in one batch (as in `quiz-me`), each with a proposed default so I
+  can answer "yes". Then restate the idea as a short ready-to-implement
+  summary: scope, approach, done criteria. No code, no files changed, no
+  ticket. Only getting to that state, nothing more.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
 - **progress-me**: "where was I" view for coming back to a session: the
