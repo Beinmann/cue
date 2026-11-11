@@ -13,13 +13,16 @@ definition. All end in `-me`.
   branch afterwards. Do not push unless I say so. If the target is ambiguous,
   ask before starting. If tests fail or the merge conflicts, stop and report.
 - **wave-me**: I point at a collection of things to do (list, tickets,
-  notes, selection) and want it done in two waves. Wave 1: every item that
-  is clear enough to implement gets a background agent doing a `land-me`
-  (independent items in parallel); tell me which ones you started. Wave 2:
-  nothing is dropped. For the unclear items, ask me your questions in one
-  batch (as in `quiz-me`) and discuss them with me until each can be
-  implemented competently, then `land-me` those in the background too.
-  Failures (tests, merge conflicts) are reported, not forced.
+  notes, selection) and want it done in two waves. Wave 1: everything clear
+  enough to implement is implemented in the background by one agent, in one
+  worktree on one branch (one commit per item, one merge into `main`, as in
+  `land-me`). Only a large change may get its own agent and branch. Ask me
+  no questions about clear items; tell me which ones you started. Wave 2:
+  nothing is dropped. The unclear items are held back, not implemented. Ask
+  me your questions in one batch (as in `quiz-me`) in the foreground and
+  discuss until each can be implemented competently, then implement those in
+  the background too. Failures (tests, merge conflicts) are reported, not
+  forced.
 - **park-me**: capture the idea as a ticket or note (not code) and return to
   what we were doing.
 - **ticket-me**: create a ticket for this (what we're discussing or pointing
