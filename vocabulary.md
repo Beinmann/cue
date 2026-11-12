@@ -44,6 +44,18 @@ definition. All end in `-me`.
 - **status-me**: extremely quick overview of the current situation: where
   we are, plus 1-2 next actions. Max 3 sentences or 4 short bullets, no
   background. Answer from context without exploring; fast over thorough.
+- **todo-me**: make a todo list of 3-8 entries for the current goal (or what
+  I'm pointing at), from context, no exploring; ask first if the target is
+  unclear. One short line per entry, next action first, status todo /
+  in progress / done. Sub-items count toward the limit, so entries stay
+  roughly equal in length. If more doesn't fit, use judgment; by default add
+  one sentence saying there is more. If a todo list already exists, update
+  it in place instead: mark done, add new, drop obsolete (never silently
+  drop something I wrote, flag it), collapse done items, say what changed
+  in one line; with several lists take the most recent and name it. Stays in
+  chat unless I name another format: `todo-me in hatch` = a Hatch widget
+  with visuals (update the existing one rather than adding a second). No
+  tickets, no parking ideas, no implementing.
 - **quiz-me**: ask every question you need answered in one batch before
   starting.
 - **chisel-me**: take the idea I'm describing from vague to
