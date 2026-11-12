@@ -41,6 +41,9 @@ definition. All end in `-me`.
   describing it.
 - **brief-me**: catch me up: what's done, what's pending, what needs my
   decision.
+- **status-me**: extremely quick overview of the current situation: where
+  we are, plus 1-2 next actions. Max 3 sentences or 4 short bullets, no
+  background. Answer from context without exploring; fast over thorough.
 - **quiz-me**: ask every question you need answered in one batch before
   starting.
 - **chisel-me**: take the idea I'm describing from vague to
