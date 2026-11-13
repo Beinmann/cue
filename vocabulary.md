@@ -35,13 +35,40 @@ definition. All end in `-me`.
 - **widget-me**: combined with another keyword or request (`todo-me
   widget-me`, `brief-me widget-me`), do what that says but show the result
   as a widget in `hatch` instead of in chat; it changes only where the
-  output is shown, nothing else. Use a board (cards in columns, e.g. done /
-  in progress / next) when the content has items or states, otherwise a
-  plain widget. Update an existing widget rather than adding a second one.
-  Alone, show the last answer (or what I'm pointing at) as a widget. If no
-  `hatch` command exists, fall back to a visually structured file or chat
-  output and say so in one line. Board layout is a first version, to be
-  refined.
+  output is shown, nothing else. For items or states use `board-me`
+  instead, otherwise a plain widget. Update an existing widget rather than
+  adding a second one. Alone, show the last answer (or what I'm pointing
+  at) as a widget. If no `hatch` command exists, fall back to a visually
+  structured file or chat output and say so in one line.
+- **board-me**: combined with another keyword or request (`todo-me
+  board-me`, `brief-me board-me`), do what that says but show the result
+  as a board (cards in columns) in `hatch`, one I can keep working on with
+  you; it changes only where the output is shown, nothing else. Alone,
+  board the last answer (or what I'm pointing at). Without a name there is
+  one shared board, widget `board`; reuse and update it instead of adding
+  a second. If I name one (`board-me releases`), use widget
+  `board-<name>` the same way. How to build it:
+  1. `hatch widget list`. If the widget exists, only edit its data (step
+     3) and stop. Otherwise `hatch widget new board-<name>` (or `board`)
+     and write `widget.json`: `{"title": "Board: <name>", "w": 760, "h":
+     460, "placement": "float", "sources": []}`; fill `index.html` (step 2).
+  2. `index.html`: one `<script type="application/json" id="data">` block
+     holds all content: `{"title": "...", "columns": [{"name": "...",
+     "cards": [{"title": "...", "detail": "...", "tag": "..."}]}]}`
+     (`detail`, `tag` optional). A small script renders it: columns side
+     by side (equal width, horizontal scroll if narrow), header = name +
+     card count, cards as rounded boxes with bold title, dim one-line
+     detail and a small tag pill; colours from `hatch.theme` (load
+     `/sdk.js`), a distinct accent per column; no network, no libraries.
+     Columns fit the content, 2-5 of them: next / in progress / done for
+     work; decide / waiting / done for questions; or what the content
+     calls for. Keep titles under ~60 characters.
+  3. Updating = rewrite only the JSON in that block (keeps the layout,
+     reloads the board). When I say "move X to done" or "add Y", edit the
+     JSON, nothing else; never create a second board.
+  4. `hatch widget open board[-<name>]`, then say in one line which board
+     and what it shows. If no `hatch` command exists, fall back to a
+     visually structured file or chat output and say so in one line.
 - **snap-me**: combined with another keyword or request (`brief-me
   snap-me`, `snap-me` plus a question), answer fast: from context and
   what you already know, minimal or no exploring, no subagents, no
