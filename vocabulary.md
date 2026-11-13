@@ -30,6 +30,19 @@ definition. All end in `-me`.
 - **ticket-me**: create a ticket for this (what we're discussing or pointing
   at). Ticket only, no code.
 
+## Modifiers
+
+- **widget-me**: combined with another keyword or request (`todo-me
+  widget-me`, `brief-me widget-me`), do what that says but show the result
+  as a widget in `hatch` instead of in chat; it changes only where the
+  output is shown, nothing else. Use a board (cards in columns, e.g. done /
+  in progress / next) when the content has items or states, otherwise a
+  plain widget. Update an existing widget rather than adding a second one.
+  Alone, show the last answer (or what I'm pointing at) as a widget. If no
+  `hatch` command exists, fall back to a visually structured file or chat
+  output and say so in one line. Board layout is a first version, to be
+  refined.
+
 ## Output style
 
 - **tldr-me**: answer in 3 lines or fewer, conclusion first, no background.
@@ -37,6 +50,14 @@ definition. All end in `-me`.
 ## Report only (change nothing)
 
 - **nudge-me**: tell me the one next action I should take, nothing else.
+- **step-me**: give me the next 2-4 steps of the current plan, small and
+  concrete enough to follow one by one: the exact command or action, which
+  file, and what output to check for. Status per step: todo / in progress /
+  done. Uses the most recent plan in the conversation, from context, no
+  exploring; ask first if there is none or several. If asked again,
+  continue from the first unfinished step, skip done ones, and say if the
+  plan changed. Describe only, never execute. Differs from `nudge-me` (one
+  bare action) and `todo-me` (whole list, one line each).
 - **show-me**: demonstrate with real output (run it, print it) instead of
   describing it.
 - **brief-me**: catch me up: what's done, what's pending, what needs my
