@@ -42,6 +42,14 @@ definition. All end in `-me`.
   `hatch` command exists, fall back to a visually structured file or chat
   output and say so in one line. Board layout is a first version, to be
   refined.
+- **snap-me**: combined with another keyword or request (`brief-me
+  snap-me`, `snap-me` plus a question), answer fast: from context and
+  what you already know, minimal or no exploring, no subagents, no
+  questions unless truly blocked, take the obvious default and say which
+  one. It changes only speed and effort, not the output format or what the
+  other keyword does. Alone, apply it to the current request. If a fast
+  answer would likely be wrong, say so in one line and give your best
+  quick guess anyway.
 
 ## Output style
 
