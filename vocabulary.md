@@ -29,6 +29,12 @@ definition. All end in `-me`.
   what we were doing.
 - **ticket-me**: create a ticket for this (what we're discussing or pointing
   at). Ticket only, no code.
+- **ask-me**: ask me 2-5 questions in one batch, then go ahead with the
+  work on my answers, no further confirmation. Questions only where the
+  answer changes what you build, each with a proposed default so I can reply
+  "yes"; take the default for anything I leave unanswered. Differs from
+  `quiz-me` (asks everything needed, before starting) and `chisel-me`
+  (stops after a summary, no work).
 
 ## Modifiers
 
