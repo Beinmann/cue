@@ -14,6 +14,16 @@ definition. All end in `-me`.
   push unless I say so. If the target is ambiguous, ask before starting (in
   the foreground, before launching). If tests fail or the merge conflicts,
   stop and report back to me.
+- **implement-me**: implement what I'm pointing at (ticket, file,
+  selection, or the last discussed change) right away, in the foreground,
+  directly in the current git checkout, no worktree (the in-place variant of
+  `land-me`). Usually just do it. If the request is unclear or confusing,
+  refuse or ask your questions first. Run the tests for decently sized
+  changes; skip them for trivial ones (a word, a typo). Then commit on the
+  current branch (normally `main`; never force, never switch branches, do
+  not push unless I say so). Commit only your own changes. If the working
+  tree already has unrelated uncommitted changes, or tests fail, stop, tell
+  me honestly and ask what to do instead of committing.
 - **wave-me**: I point at a collection of things to do (list, tickets,
   notes, selection) and want it done in two waves. Wave 1: everything clear
   enough to implement is implemented in the background by one agent, in one
