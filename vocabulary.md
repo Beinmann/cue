@@ -109,6 +109,14 @@ definition. All end in `-me`.
   continue from the first unfinished step, skip done ones, and say if the
   plan changed. Describe only, never execute. Differs from `nudge-me` (one
   bare action) and `todo-me` (whole list, one line each).
+- **test-me**: give me a numbered list of 3-10 things to test manually for
+  the current change (or what I'm pointing at), from context, no exploring;
+  ask first if the target is unclear. Entries are numbered T1, T2, ... so I
+  can refer to them ("T3 failed: ..."). Each entry: the action to take and
+  the expected result, plus a status of untested / pass / fail. Describe
+  only, never run them. If a list already exists, update it in place: keep
+  the numbers stable (never renumber, new entries get the next number),
+  record the results I report, and say what changed in one line.
 - **show-me**: demonstrate with real output (run it, print it) instead of
   describing it.
 - **brief-me**: catch me up: what's done, what's pending, what needs my
