@@ -69,6 +69,28 @@ definition. All end in `-me`.
   say so. Report what was delivered, skipped (why) and the test results.
   Differs from `test-me` (I test) in that you state expectations and I
   check them. Works with `widget-me` and `board-me`.
+- **log-me**: write a log of this session into a dated file in `logs/` of
+  the project's outer directory. From context only: no exploring, no
+  commands beyond finding the outer dir. Find the outer dir in this order:
+  (1) the superproject root if the project is a git submodule; (2) the
+  nearest ancestor that is a git repo containing the project (gitignored
+  nested clone); (3) the parent of the project repo if it is not a repo and
+  holds `CLAUDE.md` or `logs/`, or the working directory if it is a non-git
+  dir containing the project repo. If none fits (project dir only), ask
+  where to write and write nothing before the answer. Never stage or commit
+  the log. File: `logs/log-YYYY-MM-DD.md` (create `logs/` if missing). Never
+  overwrite or rewrite existing content: if today's file exists, append a
+  new section; otherwise create it with a `# Log YYYY-MM-DD` title. I may
+  call it several times per session: a section covers only what happened
+  since the previous `log-me` in this session (if you cannot tell, e.g.
+  after compaction, read the last section of today's file and continue from
+  there); if nothing is new, say so and write nothing. Section:
+  `## HH:MM – <short session goal>`, then `### Steps` (chronological, one
+  line each: what I asked, what you did with files touched and significant
+  commands, the result; failed attempts too), then `### Decisions` (what
+  was chosen and why), `### Mistakes`, `### Open follow-ups`; omit empty
+  ones, roughly 5-20 lines. Leave out secrets, tokens and personal data.
+  Report the file path and whether it was created or appended to.
 
 ## Modifiers
 
