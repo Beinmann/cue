@@ -45,6 +45,30 @@ definition. All end in `-me`.
   "yes"; take the default for anything I leave unanswered. Differs from
   `quiz-me` (asks everything needed, before starting) and `chisel-me`
   (stops after a summary, no work).
+- **spec-me**: specification by example, in two phases. Phase 1 (changes
+  nothing): give me a numbered list of 3-10 cases (C1, C2, ...) for the
+  current change (or what I'm pointing at): the situation or input, the
+  outcome you expect, and a status of unconfirmed / agreed / corrected.
+  Cover the normal path, edge cases and failures. Work from context, read
+  code only where needed, run nothing; ask first if the target is unclear.
+  I react by pointing at cases or asking questions. Update the list in
+  place: keep numbers stable, answer my questions and keep that case open,
+  for a case I call wrong take my correction or propose one (ask only if
+  you cannot infer it), cases I don't point at count as agreed, new cases
+  get the next number, say what changed in one line. Phase 2, only when I
+  say the list is final ("done", "lock it"), as in `implement-me` (current
+  checkout, commit only your own files, never push, stop and report on
+  unrelated uncommitted changes or unexpected test failures): deliver
+  something I can verify later. Always a short decisions record (final
+  expectation per case, what was corrected or chosen, why if I said so),
+  next to the tests or in the project's docs (in a notes-only directory,
+  there). If the project has a test setup, also one test per testable case
+  in its own framework, tagged with the case number; behavior that doesn't
+  exist yet gets an expected-fail or skip mark with its case number, no
+  production code. Without a test setup the record alone is the result, and
+  say so. Report what was delivered, skipped (why) and the test results.
+  Differs from `test-me` (I test) in that you state expectations and I
+  check them. Works with `widget-me` and `board-me`.
 
 ## Modifiers
 
