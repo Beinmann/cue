@@ -34,7 +34,11 @@ definition. All end in `-me`.
   me your questions in one batch (as in `quiz-me`) in the foreground and
   discuss until each can be implemented competently, then implement those in
   the background too. Failures (tests, merge conflicts) are reported, not
-  forced.
+  forced. Marking: once an item is merged into `main`, mark it as done in
+  place in the collection I pointed at (ideas file, list, ticket), with at
+  least the date, in that item's commit. Only merged items are marked;
+  held-back, failed and unmerged ones stay untouched. Never move items to
+  an archive; I do that myself later.
 - **park-me**: capture the idea as a ticket or note (not code) and return to
   what we were doing.
 - **ticket-me**: create a ticket for this (what we're discussing or pointing
