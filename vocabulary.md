@@ -131,6 +131,11 @@ definition. All end in `-me`.
   4. `hatch widget open board[-<name>]`, then say in one line which board
      and what it shows. If no `hatch` command exists, fall back to a
      visually structured file or chat output and say so in one line.
+- **confirm-me**: combined with another keyword or request (`land-me
+  confirm-me`), do what that says, but if something is unclear or a choice
+  is consequential, ask me first instead of guessing; if nothing is, just
+  proceed and say nothing about it. It changes only whether you may stop
+  and ask, nothing else. Alone, apply it to the current request.
 - **snap-me**: combined with another keyword or request (`brief-me
   snap-me`, `snap-me` plus a question), answer fast: from context and
   what you already know, minimal or no exploring, no subagents, no
@@ -188,8 +193,10 @@ definition. All end in `-me`.
   implementation-ready within 1-2 turns, and stop there. Ask every question
   needed in one batch (as in `quiz-me`), each with a proposed default so I
   can answer "yes". Then restate the idea as a short ready-to-implement
-  summary: scope, approach, done criteria. No code, no files changed, no
-  ticket. Only getting to that state, nothing more.
+  summary: scope, approach, done criteria, and one line saying whether
+  `confirm-me` is needed when implementing (will questions likely come up
+  or not). No code, no files changed, no ticket. Only getting to that
+  state, nothing more.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
 - **progress-me**: "where was I" view for coming back to a session: the
