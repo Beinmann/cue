@@ -132,10 +132,17 @@ definition. All end in `-me`.
      and what it shows. If no `hatch` command exists, fall back to a
      visually structured file or chat output and say so in one line.
 - **confirm-me**: combined with another keyword or request (`land-me
-  confirm-me`), do what that says, but if something is unclear or a choice
-  is consequential, ask me first instead of guessing; if nothing is, just
-  proceed and say nothing about it. It changes only whether you may stop
-  and ask, nothing else. Alone, apply it to the current request.
+  confirm-me`), do what that says, but ask me first instead of guessing
+  when the answer would change what you build or the action is hard to
+  reverse (delete, push, force, an unusual merge; routine merges in repos
+  where they happen often need no asking). Ask in one batch, each question
+  with a proposed default so I can reply "yes"; take the default for
+  anything I leave unanswered. With background keywords (`land-me`,
+  `wave-me`) ask in the foreground before launching; after launch no more
+  questions, report failures instead. If there is nothing to ask, proceed
+  silently. Differs from `ask-me` (always asks 2-5 questions): this asks
+  zero or more, only if needed. It changes only whether you may stop and
+  ask, nothing else. Alone, apply it to the current request.
 - **snap-me**: combined with another keyword or request (`brief-me
   snap-me`, `snap-me` plus a question), answer fast: from context and
   what you already know, minimal or no exploring, no subagents, no
