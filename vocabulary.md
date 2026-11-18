@@ -193,10 +193,8 @@ definition. All end in `-me`.
   implementation-ready within 1-2 turns, and stop there. Ask every question
   needed in one batch (as in `quiz-me`), each with a proposed default so I
   can answer "yes". Then restate the idea as a short ready-to-implement
-  summary: scope, approach, done criteria, and one line saying whether
-  `confirm-me` is needed when implementing (will questions likely come up
-  or not). No code, no files changed, no ticket. Only getting to that
-  state, nothing more.
+  summary: scope, approach, done criteria. No code, no files changed, no
+  ticket. Only getting to that state, nothing more.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
 - **progress-me**: "where was I" view for coming back to a session: the
