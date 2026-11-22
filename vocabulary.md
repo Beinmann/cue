@@ -82,13 +82,16 @@ definition. All end in `-me`.
   holds `CLAUDE.md` or `logs/`, or the working directory if it is a non-git
   dir containing the project repo. If none fits (project dir only), ask
   where to write and write nothing before the answer. Never stage or commit
-  the log. File: `logs/log-YYYY-MM-DD.md` (create `logs/` if missing). Never
-  overwrite or rewrite existing content: if today's file exists, append a
-  new section; otherwise create it with a `# Log YYYY-MM-DD` title. I may
-  call it several times per session: a section covers only what happened
-  since the previous `log-me` in this session (if you cannot tell, e.g.
-  after compaction, read the last section of today's file and continue from
-  there); if nothing is new, say so and write nothing. Section:
+  the log. File: `logs/log-YYYY-MM-DD.md` (create `logs/` if missing). The
+  log day starts at 06:00: take the date from the current time minus 6
+  hours, so before 06:00 it is still the previous day's file (the section
+  heading keeps the real clock time). Never overwrite or rewrite existing
+  content: if that day's file exists, append a new section; otherwise
+  create it with a `# Log YYYY-MM-DD` title. I may call it several times
+  per session: a section covers only what happened since the previous
+  `log-me` in this session (if you cannot tell, e.g. after compaction, read
+  the last section of that day's file and continue from there); if nothing
+  is new, say so and write nothing. Section:
   `## HH:MM – <short session goal>`, then `### Steps` (chronological, one
   line each: what I asked, what you did with files touched and significant
   commands, the result; failed attempts too), then `### Decisions` (what
