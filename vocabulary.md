@@ -189,6 +189,35 @@ definition. All end in `-me`.
 - **status-me**: extremely quick overview of the current situation: where
   we are, plus 1-2 next actions. Max 3 sentences or 4 short bullets, no
   background. Answer from context without exploring; fast over thorough.
+- **path-me**: show me the path this session is on, visually in chat.
+  Answer from context, normally in one turn after some thinking: no
+  exploring and no changes. Rarely a tool call or a counter question is
+  fine. Extremely condensed. Layout, in this order: (1) At most 6 items
+  found or done in this session, a representative pick in the order they
+  happened, related steps merged, not repeating the tree's tasks. One
+  plain `- ` line each, no table, no emoji; an emoji only for an
+  exceptional item (🎫 became a ticket, ⚠️ problem). Text is telegraphic,
+  ~8 words max, no "I", shorter than seems necessary. (2) Last, `###
+  Overall status` with a tree in a code block, zoomed out in levels: the
+  overall goal as root, below it the phases (finished `├─ ✅ text`, the
+  current one `├─ 📍 text` expanded, upcoming `└─ later: text`); inside
+  the current phase its tasks the same way (finished ✅, current 📍
+  last), with `└─ next: ...` nested under the current task (plain text,
+  no emoji; if none is clear, `next: pick direction`). Max 4 levels and
+  ~9 lines. Root and phases come from context only: if the overall goal
+  is not discernible, leave the root out instead of inventing it (the
+  topic is then the root). Several parallel topics: one tree each.
+  Example:
+      AI keyword vocabulary
+      ├─ ✅ first keywords defined
+      ├─ 📍 path-me
+      │  ├─ ✅ defined, installed
+      │  └─ 📍 layout polish
+      │     └─ next: test in a longer session
+      └─ later: more keywords
+  Differs from `status-me` (quick situation plus next actions, no
+  trajectory) and `brief-me` (done / pending / needs my decision). Stays
+  in chat; with `widget-me` or `board-me` it goes to `hatch` instead.
 - **todo-me**: make a todo list of 3-8 entries for the current goal (or what
   I'm pointing at), from context, no exploring; ask first if the target is
   unclear. One short line per entry, next action first, status todo /
