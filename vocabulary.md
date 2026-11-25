@@ -5,6 +5,43 @@ Experiment: using keywords to interact with ai's. Unsure whether I keep this (20
 Keywords I use in any project. When a message contains one, follow its
 definition. All end in `-me`.
 
+## Visual alphabet
+
+Keywords that report status or ask me something mark lines with a few
+emoji so I can skim and see the important points first. One symbol has one
+meaning, in every keyword:
+
+- ❓ waiting on me: a question or decision only I can answer
+- ⚠️ problem or risk: failure, blocker, corrected or open item
+- 📍 current: in progress, where we are
+- ✅ done
+- 👉 next action
+- 💡 idea
+- 🎫 became a ticket
+
+Rules:
+- Budget: at most 3 different symbols per response, on average about 1.
+  Repeating one symbol is calm, variety is the noise.
+- Mark the exception, not the norm: routine items (todo, untested, passed,
+  started) stay plain. No emoji at all is a valid answer, e.g. `close-me`
+  with nothing open.
+- Only at the start of a line or tree node, one per line. Never mid-sentence
+  and never in code, commits, files or tickets. Chat output only; widgets
+  and boards use their own styling.
+- Home symbols per keyword, nothing beyond them:
+  - `todo-me`, `step-me`: 📍 current, ✅ done
+  - `test-me`: ⚠️ failed
+  - `spec-me`: ⚠️ corrected or open cases
+  - `brief-me`: ❓ needs my decision, ⚠️ blocked
+  - `status-me`: 👉 next action
+  - `close-me`: ⚠️ each open item
+  - `progress-me`: ✅ done, 📍 current, 👉 next, ❓ waiting on me
+  - `path-me`: as defined there
+  - `wave-me`: ❓ each held-back unclear item, ⚠️ failures
+  - `quiz-me`, `chisel-me`, `ask-me`, `confirm-me`: ❓ on the questions
+  - all others: none, except ❓ for something waiting on me and ⚠️ for a
+    real problem
+
 ## Acting
 
 - **land-me**: implement what I'm pointing at (ticket, file, selection, or
