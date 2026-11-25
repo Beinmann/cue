@@ -189,6 +189,18 @@ definition. All end in `-me`.
 - **status-me**: extremely quick overview of the current situation: where
   we are, plus 1-2 next actions. Max 3 sentences or 4 short bullets, no
   background. Answer from context without exploring; fast over thorough.
+- **close-me**: I am unsure whether this session can be closed safely: tell
+  me what is still open, or that nothing is. Changes nothing, fixes
+  nothing. Answer from context plus quick read-only checks (`git status`,
+  `git worktree list`, running agents); fast over exhaustive. Check:
+  uncommitted or unmerged work of this session; leftover worktrees,
+  branches, background agents, temp files; important new information in
+  context not yet logged (`log-me`); ideas or follow-ups mentioned but not
+  parked or ticketed; open questions or decisions waiting on me. Unpushed
+  commits are info only, not a blocker. Verdict first: "Safe to close,
+  nothing left", or a short list of open items, each naming the action or
+  keyword that resolves it (e.g. "commit the 2 changed files", "`log-me`:
+  decision on X not logged"). No long prose.
 - **path-me**: show me the path this session is on, visually in chat.
   Answer from context, normally in one turn after some thinking: no
   exploring and no changes. Rarely a tool call or a counter question is
