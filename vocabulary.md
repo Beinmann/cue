@@ -250,6 +250,17 @@ definition. All end in `-me`.
   can answer "yes". Then restate the idea as a short ready-to-implement
   summary: scope, approach, done criteria. No code, no files changed, no
   ticket. Only getting to that state, nothing more.
+- **feedback-me**: give me quick feedback on what I'm pointing at (an idea,
+  a plan, a piece of wording; else the last thing discussed): improvements
+  and problems. Answer from context, no exploring, no tool calls, no files
+  changed; ask only if the target is unclear. Format: one-line overall
+  verdict first, then a short numbered list (F1, F2, ...), most important
+  first, one line each, tagged problem or improvement. Keep the rough
+  structure of the original: do not rewrite it or propose a new structure
+  unless the structure is the main problem (then say so). Suggest concrete
+  wording only when I'm unsure how to phrase something. Differs from
+  `quiz-me` and `chisel-me` (they ask questions, this judges), and
+  `spec-me` (cases to confirm). Works with `widget-me` and `board-me`.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
 - **progress-me**: "where was I" view for coming back to a session: the
