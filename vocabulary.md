@@ -253,12 +253,13 @@ definition. All end in `-me`.
 - **feedback-me**: give me quick feedback on what I'm pointing at (an idea,
   a plan, a piece of wording; else the last thing discussed): improvements
   and problems. Answer from context, no exploring, no tool calls, no files
-  changed; ask only if the target is unclear. Format: one-line overall
-  verdict first, then a short numbered list (F1, F2, ...), most important
-  first, one line each, tagged problem or improvement. Keep the rough
-  structure of the original: do not rewrite it or propose a new structure
-  unless the structure is the main problem (then say so). Suggest concrete
-  wording only when I'm unsure how to phrase something. Differs from
+  changed; ask only if the target is unclear. Short: a one-line verdict,
+  then at most 3 numbered points (F1-F3), most important first, one line
+  each, tagged problem or improvement. If more is worth saying, add one
+  line that there is more (with a count) and stop; I'll ask for it. Keep
+  the rough structure of the original: do not rewrite it or propose a new
+  structure unless the structure is the main problem (then say so). Suggest
+  concrete wording only when I'm unsure how to phrase something. Differs from
   `quiz-me` and `chisel-me` (they ask questions, this judges), and
   `spec-me` (cases to confirm). Works with `widget-me` and `board-me`.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
