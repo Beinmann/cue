@@ -252,8 +252,9 @@ definition. All end in `-me`.
   ticket. Only getting to that state, nothing more.
 - **feedback-me**: give me quick feedback on what I'm pointing at (an idea,
   a plan, a piece of wording; else the last thing discussed): improvements
-  and problems. Answer from context, no exploring, no tool calls, no files
-  changed; ask only if the target is unclear. Short: a one-line verdict,
+  and problems. Answer from context, no exploring, no files changed; the
+  only tool call allowed is reading the target itself if it is a file or
+  selection not already in context. Ask only if the target is unclear. Short: a one-line verdict,
   then at most 3 numbered points (F1-F3), most important first, one line
   each, tagged problem or improvement. If more is worth saying, add one
   line that there is more (with a count) and stop; I'll ask for it. Keep
