@@ -263,6 +263,25 @@ definition. All end in `-me`.
   concrete wording only when I'm unsure how to phrase something. Differs from
   `quiz-me` and `chisel-me` (they ask questions, this judges), and
   `spec-me` (cases to confirm). Works with `widget-me` and `board-me`.
+- **brainstorm-me**: think an idea through with me, as a discussion. The
+  goal is to facilitate a conversation, not to deliver a verdict. Changes
+  nothing: chat only, no files, no tickets, no code; read files only if the
+  topic is about the current project. Ask first if the topic is unclear.
+  First reply, medium size: what is good about the idea and why, the
+  tradeoffs, anything you would add or an alternative worth considering, and
+  2-4 questions that move the discussion (clarifying or important ones, each
+  with a proposed default). Major flaws are named only where the idea has to
+  fight to survive (then lead with them, plus the cost if it is large);
+  otherwise do not play devil's advocate. Every later reply is short: react
+  to my answer, at most one new point or idea, end with one or two questions
+  or choices. Do not repeat earlier points; I steer. If more thinking will
+  not help and a prototype, test or implementation is needed to learn more,
+  say so. When I say "done" or "enough", give a 2-3 line summary (decided,
+  still open) and name the keyword that fits next (`chisel-me`, `park-me`,
+  `ticket-me`, `spec-me`) without running it. Differs from `chisel-me`
+  (goes to implementation-ready), `feedback-me` (one-shot judgment of a
+  finished piece) and `quiz-me` (questions only). Works with `widget-me`
+  and `board-me`.
 - **diff-me**: summarize what changed since the last commit (or since `main`),
   grouped by purpose, not by file.
 - **progress-me**: "where was I" view for coming back to a session: the
