@@ -266,17 +266,19 @@ definition. All end in `-me`.
 - **brainstorm-me**: think an idea through with me, as a discussion. The
   goal is to facilitate a conversation, not to deliver a verdict. Changes
   nothing: chat only, no files, no tickets, no code; read files only if the
-  topic is about the current project. Ask first if the topic is unclear.
-  First reply, medium size: what is good about the idea and why, the
-  tradeoffs, anything you would add or an alternative worth considering, and
-  2-4 questions that move the discussion (clarifying or important ones, each
-  with a proposed default). Major flaws are named only where the idea has to
-  fight to survive (then lead with them, plus the cost if it is large);
-  otherwise do not play devil's advocate. Every later reply is short: react
-  to my answer, at most one new point or idea, end with one or two questions
-  or choices. Do not repeat earlier points; I steer. If more thinking will
-  not help and a prototype, test or implementation is needed to learn more,
-  say so. When I say "done" or "enough", give a 2-3 line summary (decided,
+  topic is about the current project. A vague idea is fine, start anyway;
+  ask first only if you cannot tell what I'm pointing at. First reply,
+  medium size: what is good about the idea and why, the tradeoffs, anything
+  you would add or an alternative worth considering, and 2-4 questions that
+  move the discussion (clarifying or important ones, each with a proposed
+  default). If the idea has a serious flaw or must fight to survive, lead
+  with that (plus the cost if it is large); otherwise leave flaws to the
+  tradeoffs and do not play devil's advocate. Every later reply is short:
+  react to my answer, at most one new point or idea, end with one or two
+  questions or choices. Keep it moving: when it stalls, offer 2-3 directions
+  to pick from; when we go in circles, say so. Do not repeat earlier points;
+  I steer. If more thinking will not help and a prototype, test or
+  implementation is needed to learn more, say so. When I say "done" or "enough", give a 2-3 line summary (decided,
   still open) and name the keyword that fits next (`chisel-me`, `park-me`,
   `ticket-me`, `spec-me`) without running it. Differs from `chisel-me`
   (goes to implementation-ready), `feedback-me` (one-shot judgment of a
